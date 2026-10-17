@@ -53,6 +53,6 @@ def main():
                 else:
                     print("Result: ", division(num1, num2))
         else:
-            print("Invalid choice. Please choose 1, 2, 3, 4, or 5.")
+            print("Invalid choice. Please Choose 1, 2, 3, 4, or 5.")
 if __name__ == "__main__":
     main()
