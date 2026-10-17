@@ -15,6 +15,18 @@ def calculator():
 
     return num1, num2
 
+def addition(a, b):
+    return a + b
+
+def subtraction(a, b):
+    return a - b 
+
+def multiplication(a, b):
+    return a * b
+
+def division(a, b):
+    return a / b
+
 def main():
     while True:
         options = main_menu()
@@ -23,19 +35,23 @@ def main():
             print("Exiting...")
             break
         elif options in ("1", "2", "3", "4"):
-            num1, num2 = calculator()
+            try:
+                num1, num2 = calculator()
+            except ValueError:
+                print("Invalid input, please enter numbers only.")
+                continue
 
             if options == "1":
-                print("Result: ", num1 + num2)
+                print("Result: ", addition(num1, num2))
             elif options == "2":
-                print("Result: ", num1 - num2)
+                print("Result: ", subtraction(num1, num2))
             elif options == "3":
-                print("Result: ", num1 * num2)
+                print("Result: ", multiplication(num1, num2))
             elif options == "4":
                 if num2 == 0:
-                    print("Cannot divide by zero.")
+                    print("Cannot divide by zero.") 
                 else:
-                    print("Result: ", num1 / num2)
+                    print("Result: ", division(num1, num2))
         else:
             print("Invalid choice. Please choose 1, 2, 3, 4, or 5.")
 if __name__ == "__main__":
