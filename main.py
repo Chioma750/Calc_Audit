@@ -19,7 +19,10 @@ def main():
     while True:
         options = main_menu()
 
-        if options in ("1", "2", "3", "4"):
+        if options == "5":
+            print("Exiting...")
+            break
+        elif options in ("1", "2", "3", "4"):
             num1, num2 = calculator()
 
             if options == "1":
@@ -33,11 +36,6 @@ def main():
                     print("Cannot divide by zero.")
                 else:
                     print("Result: ", num1 / num2)
-            elif options == "5":
-                print("Exiting...")
-                break
-            else:
-                print("Invalid operator, choose either +, -, * or /.")
         else:
             print("Invalid choice. Please choose 1, 2, 3, 4, or 5.")
 if __name__ == "__main__":
